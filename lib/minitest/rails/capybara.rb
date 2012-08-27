@@ -8,3 +8,7 @@ class MiniTest::Rails::ActionDispatch::IntegrationTest
   include Capybara::RSpecMatchers
   include Capybara::DSL
 end
+
+class MiniTest::Rails::ActionView::TestCase
+  include Capybara::RSpecMatchers
+end
