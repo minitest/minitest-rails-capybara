@@ -12,7 +12,7 @@ describe "Capybara Matchers View Test" do
 
   describe "have_content" do
     it "rendered with content" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_content rendered, "Hello World"
       refute_have_content rendered, "Goobye All!"                
       rendered.must_have_content    "Hello World"
@@ -20,7 +20,7 @@ describe "Capybara Matchers View Test" do
     end
 
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
     
       it { must have_content("Hello World") }
@@ -32,7 +32,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_selector" do
     it "rendered with heading" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_selector rendered, "h1"
       refute_have_selector rendered, "h3"
       rendered.must_have_selector    "h1"
@@ -40,7 +40,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_selector("h1") }
@@ -52,7 +52,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_link" do
     it "has a link to home" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_link rendered, "home"
       refute_have_link rendered, "away"
       rendered.must_have_link    "home"
@@ -60,7 +60,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_link("home") }
@@ -72,7 +72,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_field" do
     it "has a button to submit" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_field rendered, "Email Address"
       refute_have_field rendered, "Bank Account"
       rendered.must_have_field    "Email Address"
@@ -80,7 +80,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_field("Email Address") }
@@ -92,7 +92,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_button" do
     it "has a button to login" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_button rendered, "random button"
       refute_have_button rendered, "missing button"
       rendered.must_have_button    "random button"
@@ -100,7 +100,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_button("random button") }
@@ -112,7 +112,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_checked_field" do
     it "has a button to submit" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_checked_field rendered, "going"
       refute_have_checked_field rendered, "avoid"
       rendered.must_have_checked_field    "going"
@@ -120,7 +120,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_checked_field("going") }
@@ -132,7 +132,7 @@ describe "Capybara Matchers View Test" do
   
   describe "have_unchecked_field" do
     it "has a button to submit" do
-      render inline: CONTENT
+      render :inline => CONTENT
       assert_have_unchecked_field rendered, "avoid"
       refute_have_unchecked_field rendered, "going"
       rendered.must_have_unchecked_field    "avoid"
@@ -140,7 +140,7 @@ describe "Capybara Matchers View Test" do
     end
   
     describe "with subject" do
-      before  { render inline: CONTENT }
+      before  { render :inline => CONTENT }
       subject { rendered }
   
       it { must have_unchecked_field("avoid") }
