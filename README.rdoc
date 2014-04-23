@@ -107,6 +107,16 @@ Or add the following to the bottom of your Rakefile to add feature tests to the 
 
     Minitest::Rails::Testing.default_tasks << "features"
 
+Add the following to your <tt>Rakefile</tt> or a file in <tt>lib/tasks</tt> to add a rake task for running feature tests:
+
+    Rails::TestTask.new("test:features" => "test:prepare") do |t|
+      t.pattern = "test/features/**/*_test.rb"
+    end
+
+If you want your new task to be run when you run <tt>rake test</tt>, also add the following:
+
+    Rake::Task["test:run"].enhance ["test:features"]
+
 == Get Involved
 
 Join the mailing list to get help or offer suggestions.
