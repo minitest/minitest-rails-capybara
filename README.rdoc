@@ -41,7 +41,7 @@ To generate these feature tests, you can use the feature generator:
 You can now use Capybara in your feature tests!
 
     require "test_helper"
-    
+
     class CanAccessHomeTest < Capybara::Rails::TestCase
       def test_homepage_has_content
         visit root_path
@@ -56,7 +56,7 @@ Or you can specify use of the Capybara's spec DSL by providing the <tt>--spec</t
 Which will generate a feature test using the Capybara spec DSL:
 
     require "test_helper"
-    
+
     feature "Can Access Home" do
       scenario "has content" do
         visit root_path
@@ -103,9 +103,9 @@ Issue the following rake command to run your features tests:
 
     $ rake minitest:features
 
-Or add the following to the bottom of your Rakefile to add feature tests to the default testing task:
+Or add the following to the bottom of your Rakefile to run Minitest as the default testing task:
 
-    Minitest::Rails::Testing.default_tasks << "features"
+    task :default => 'minitest:all'
 
 == Get Involved
 
