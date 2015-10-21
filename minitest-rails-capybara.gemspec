@@ -27,14 +27,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<minitest-rails>, ["~> 2.1"])
       s.add_runtime_dependency(%q<capybara>, ["~> 2.0"])
       s.add_runtime_dependency(%q<minitest-capybara>, ["~> 0.7.0"])
-      s.add_runtime_dependency(%q<minitest-metadata>, ["~> 0.5.0"])
+      s.add_runtime_dependency(%q<minitest-metadata>, ["~> 0.6.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 4.0"])
       s.add_development_dependency(%q<hoe>, ["~> 3.12"])
     else
       s.add_dependency(%q<minitest-rails>, ["~> 2.1"])
       s.add_dependency(%q<capybara>, ["~> 2.0"])
       s.add_dependency(%q<minitest-capybara>, ["~> 0.7.0"])
-      s.add_dependency(%q<minitest-metadata>, ["~> 0.5.0"])
+      s.add_dependency(%q<minitest-metadata>, ["~> 0.6.0"])
       s.add_dependency(%q<rdoc>, ["~> 4.0"])
       s.add_dependency(%q<hoe>, ["~> 3.12"])
     end
@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<minitest-rails>, ["~> 2.1"])
     s.add_dependency(%q<capybara>, ["~> 2.0"])
     s.add_dependency(%q<minitest-capybara>, ["~> 0.7.0"])
-    s.add_dependency(%q<minitest-metadata>, ["~> 0.5.0"])
+    s.add_dependency(%q<minitest-metadata>, ["~> 0.6.0"])
     s.add_dependency(%q<rdoc>, ["~> 4.0"])
     s.add_dependency(%q<hoe>, ["~> 3.12"])
   end
