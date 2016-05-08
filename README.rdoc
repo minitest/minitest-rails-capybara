@@ -36,7 +36,7 @@ Capybara is intended to be used for automating a browser to test your applicatio
 
 To generate these feature tests, you can use the feature generator:
 
-    rails generate minitest:feature CanAccessHome
+    rails generate mini_test:feature CanAccessHome
 
 You can now use Capybara in your feature tests!
 
@@ -51,7 +51,7 @@ You can now use Capybara in your feature tests!
 
 Or you can specify use of the Capybara's spec DSL by providing the <tt>--spec</tt> option:
 
-    rails generate minitest:feature CanAccessHome --spec
+    rails generate mini_test:feature CanAccessHome --spec
 
 Which will generate a feature test using the Capybara spec DSL:
 
