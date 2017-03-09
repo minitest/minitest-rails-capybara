@@ -42,25 +42,25 @@ You can now use Capybara in your feature tests!
 
     require "test_helper"
 
-    feature "Can Access Home" do
-      scenario "has content" do
+    class CanAccessHomeTest < Capybara::Rails::TestCase
+      test "homepage has content" do
         visit root_path
-        page.must_have_content "Home#index"
+        assert page.has_content?("Home#index")
       end
     end
 
-Or you can opt-out of the Capybara's spec DSL by providing the <tt>--no-spec</tt> option:
+Or you can use Capybara's spec DSL by providing the <tt>--spec</tt> option:
 
-    rails generate minitest:feature CanAccessHome --no-spec
+    rails generate minitest:feature CanAccessHome --spec
 
 Which will generate a feature test using the Capybara spec DSL:
 
     require "test_helper"
 
-    class CanAccessHomeTest < Capybara::Rails::TestCase
-      def test_homepage_has_content
+    feature "Can Access Home" do
+      scenario "has content" do
         visit root_path
-        assert page.has_content?("Home#index")
+        page.must_have_content "Home#index"
       end
     end
 
